@@ -143,16 +143,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 90%;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-sizing: content-box;
-  width: 100%;
-  border: solid #464646 10px;
 }
 
 .gallery-item h3 {
@@ -185,14 +181,71 @@
     font-size: 3rem;
     text-align: center;
 }
-.principal{
-  width: 30%;
+
+/* biografia style*/
+.bio-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 1000px;
+  display: grid;
+
   margin: auto;
-}
-.textblack{
-  color: black;
+  padding-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .bio-section {
+            margin-top: 20px;
+        }
+
+/*estilo del boton sticky regresar */
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.sticky-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+        @media (max-width: 600px) {
+            .bio-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .gallery {
@@ -222,24 +275,8 @@
     text-align: center;
 }
 }
-/*
-/* Small devices (sm: tablets, 576px and up) * /
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* Estilos para tablets * /
-}
 
-/* Medium devices (md: desktops, 768px and up) * /
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Estilos para pantallas medianas * /
-}
-*/
-
-
-/*@media (max-width: 480px) {*/
- /* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-  /* Estilos para dispositivos pequeños */
-
+@media (max-width: 480px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     padding: 0px;
@@ -329,184 +366,47 @@
                 </a>
               </li>
           </ul>
-          
-    </div> <h2 class="titulopage">Galleria de directores</h2> 
-    <div class="principal">
-          <!-- item--><a href="#" class="textblack">
-            <div class="gallery-item">
-              <img src="images/f00mm.jpg" alt="director">
-              <div class="namebox">
-              <h3 style="margin-top: 20px;">Dr. Mario Mendoza</h3>
-              </div>
+        </div>  
+          <div class="bio-container">
+            <img src="images/f13ar.jpg" alt="MarioAguilar" class="profile-image">
+            
+            <h1>Aaron Baruch Rodríguez Ramos </h1>
+            <h3 style="  place-items: center; display: grid;">(Director del Hospital Psiquiátrico Mario Mendoza enero 2013 a enero 2014)</h3>
+            <div class="bio-section">
+              <p>
+                Nació en Tegucigalpa el 25 de agosto de 1976.
+                            </p>
           </div>
-        </a>
-      </div>
-    <div class="gallery">
-      
-      <!-- item--><a href="01leon.html">
-      <div class="gallery-item">
-          <img src="images/f01fl.jpg" alt="Francisco León Gómez">
-          <div class="namebox">
-          <h3>Dr. Francisco León</h3>
-          <spam>1973-1974</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="02pineda.html">
-        <div class="gallery-item">
-          <img src="images/f02op.jpg" alt="Octavio Pineda">
-          <div class="namebox">
-          <h3>Dr. Octavio Pineda</h3>
-          <spam>1974-1975</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="03murra.html">
-        <div class="gallery-item">
-          <img src="images/f03dm.jpg" alt="Dagoberto Espinoza Murra">
-          <div class="namebox">
-          <h3>Dr. Dagoberto Murra</h3>
-          <spam>1975-1976</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="04vittetoe.html">
-        <div class="gallery-item">
-          <img src="images/f04kv.jpg" alt="Keneth Vittetoe">
-          <div class="namebox">
-          <h3>Dr. Keneth Vittetoe</h3>
-          <spam>1976-1984</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-
-          <!-- item--><a href="05ucles.html">
-            <div class="gallery-item">
-              <img src="images/f05ju.jpg" alt="Javier Uclés">
-              <div class="namebox">
-              <h3>Dr. Javier Uclés</h3>
-              <spam>1984-1986</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-          <!-- item--><a href="06reyes.html">
-            <div class="gallery-item">
-              <img src="images/f06ar.jpg" alt="Américo Reyes Ticas">
-              <div class="namebox">
-              <h3>Dr. Américo Reyes</h3>
-              <spam>1986-1994</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->      
-          <!-- item--><a href="07mendoza.html">
-            <div class="gallery-item">
-              <img src="images/f07mm.jpg" alt="Mario Valentin Mendoza">
-              <div class="namebox" style="height: 70px;">
-              <h3>Dr. Mario Mendoza</h3>
-              <spam>1994-1996; 2002-2005; 2010-2012</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-   
-      
-      
-
-            <!-- item--><a href="#">
-              <div class="gallery-item">
-                <img src="images/f08jb.jpg" alt="Julio Bourdeth">
-                <div class="namebox">
-                <h3>Dr. Julio Bourdeth</h3>
-                <spam>1997-1998</spam>
-                </div>
+            
+            <div class="bio-section">
+                <h2>Educación</h2>
+                <p>
+                  Cursó su primaria en la Escuela Jesús Aguilar Paz y su secundaria en el Instituto San Buena Ventura. Obtuvo su título de Bachiller en Ciencias y Letras en el Instituto Alfonso Guillén Zelaya.
+                </p><p>Se graduó de Médico y Cirujano general en la Universidad Autónoma de Honduras en 2003 y de Médico Especialista en Psiquiatría en el 2009.
+                </p><p>En 2019 cursa un Diplomado de Especialización en tratamiento psicológico de la obesidad y trastornos del comportamiento alimentario de la Universidad Nacional de Educación a Distancia “Madrid, España”.
+           </p>
             </div>
-          </a>
-            <!-- fin item -->
-
-      <!-- item--><a href="09murcia.html">
-        <div class="gallery-item">
-          <img src="images/f09hm.jpg" alt="Hector Murcia Pinto">
-          <div class="namebox">
-          <h3>Dr. Hector Murcia</h3>
-          <spam>1998-2002</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      
-      
-        <!-- item--><a href="10chirinos.html">
-          <div class="gallery-item">
-            <img src="images/f10ac.jpg" alt="América Chirinos">
-            <div class="namebox">
-            <h3>Dra. América Chirinos</h3>
-            <spam>2005-2006; 2015-2022</spam>
+            
+            <div class="bio-section">
+                <h2>Academia y Publiaciones</h2>
+                <p>
+                  Es miembro del Colegio Médico de Honduras y de la Asociación Hondureña de Psiquiatría             </p>
             </div>
+            
+            <div class="bio-section">
+                <h2>Cargos</h2>
+                <p>
+                  2004 a 2006 Medico General por contrato en Hospital Nacional Psiquiátrico Santa Rosita
+                </p><p>2010 a la actualidad Médico Especialista de guardia, Hospital Nacional Psiquiátrico Santa Rosita
+                </p><p>2010 a 2011 Médico Especialista por contrato en sala de emergencia del Hospital Psiquiátrico Mario Mendoza y a partir de agosto 2012 con plaza permanente.
+                </p><p>2015 a 2022 funcionalmente nombrado como Jefe de Sala de Varones del Hospital Psiquiátrico Mario Mendoza.
+                </p><p>De Enero 2013 a Enero 2014 fue nombrado funcionalmente como Director del Hospital Mario Mendoza y desde marzo 2022 hasta la actualidad tiene nombramiento funcional como Sub Director Asistencial.
+                                  </p>
+            </div>
+
+           <br>
+            <br>
         </div>
-      </a>
-        <!-- fin item -->
-              <!-- item--><a href="11guifarro.html">
-                <div class="gallery-item">
-                  <img src="images/f11vg.jpg" alt="Vilma Sagrario Guifarro">
-                  <div class="namebox">
-                  <h3>Dra. Vilma Guifarro</h3>
-                  <spam>2006</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-          
-          
-              <!-- item--><a href="12paz.html">
-                <div class="gallery-item">
-                  <img src="images/f12ap.jpg" alt="Alicia Del Carmen Paz">
-                  <div class="namebox">
-                  <h3>Dra. Alicia Paz</h3>
-                  <spam>2006-2010</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-                            <!-- item--><a href="13rodriguez.html">
-                              <div class="gallery-item">
-                                <img src="images/f13ar.jpg" alt="Aarón Baruch Rodríguez">
-                                <div class="namebox">
-                                <h3>Dr Aarón Rodríguez</h3>
-                                <spam>2013-2014</spam>
-                                </div>
-                            </div>
-                          </a>
-                            <!-- fin item -->    
-                                          <!-- item--><a href="14aguilar.html">
-                <div class="gallery-item">
-                  <img src="images/f14ma.jpg" alt="Mario Francisco Aguilar">
-                  <div class="namebox">
-                  <h3>Dr. Mario Aguilar</h3>
-                  <spam>2022-Actualidad</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->              
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-             
-
-   
-
-      </div>
+        <a href="index.html" class="sticky-button" id="top">⬆ Regresar</a>
     
 </body>

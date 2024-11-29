@@ -143,16 +143,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 90%;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-sizing: content-box;
-  width: 100%;
-  border: solid #464646 10px;
 }
 
 .gallery-item h3 {
@@ -185,14 +181,71 @@
     font-size: 3rem;
     text-align: center;
 }
-.principal{
-  width: 30%;
+
+/* biografia style*/
+.bio-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 1000px;
+  display: grid;
+  place-items: center;
   margin: auto;
-}
-.textblack{
-  color: black;
+  padding-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .bio-section {
+            margin-top: 20px;
+        }
+
+/*estilo del boton sticky regresar */
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.sticky-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+        @media (max-width: 600px) {
+            .bio-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .gallery {
@@ -222,24 +275,8 @@
     text-align: center;
 }
 }
-/*
-/* Small devices (sm: tablets, 576px and up) * /
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* Estilos para tablets * /
-}
 
-/* Medium devices (md: desktops, 768px and up) * /
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Estilos para pantallas medianas * /
-}
-*/
-
-
-/*@media (max-width: 480px) {*/
- /* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-  /* Estilos para dispositivos pequeños */
-
+@media (max-width: 480px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     padding: 0px;
@@ -329,184 +366,80 @@
                 </a>
               </li>
           </ul>
-          
-    </div> <h2 class="titulopage">Galleria de directores</h2> 
-    <div class="principal">
-          <!-- item--><a href="#" class="textblack">
-            <div class="gallery-item">
-              <img src="images/f00mm.jpg" alt="director">
-              <div class="namebox">
-              <h3 style="margin-top: 20px;">Dr. Mario Mendoza</h3>
-              </div>
-          </div>
-        </a>
-      </div>
-    <div class="gallery">
-      
-      <!-- item--><a href="01leon.html">
-      <div class="gallery-item">
-          <img src="images/f01fl.jpg" alt="Francisco León Gómez">
-          <div class="namebox">
-          <h3>Dr. Francisco León</h3>
-          <spam>1973-1974</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="02pineda.html">
-        <div class="gallery-item">
-          <img src="images/f02op.jpg" alt="Octavio Pineda">
-          <div class="namebox">
-          <h3>Dr. Octavio Pineda</h3>
-          <spam>1974-1975</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="03murra.html">
-        <div class="gallery-item">
-          <img src="images/f03dm.jpg" alt="Dagoberto Espinoza Murra">
-          <div class="namebox">
-          <h3>Dr. Dagoberto Murra</h3>
-          <spam>1975-1976</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="04vittetoe.html">
-        <div class="gallery-item">
-          <img src="images/f04kv.jpg" alt="Keneth Vittetoe">
-          <div class="namebox">
-          <h3>Dr. Keneth Vittetoe</h3>
-          <spam>1976-1984</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-
-          <!-- item--><a href="05ucles.html">
-            <div class="gallery-item">
-              <img src="images/f05ju.jpg" alt="Javier Uclés">
-              <div class="namebox">
-              <h3>Dr. Javier Uclés</h3>
-              <spam>1984-1986</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-          <!-- item--><a href="06reyes.html">
-            <div class="gallery-item">
-              <img src="images/f06ar.jpg" alt="Américo Reyes Ticas">
-              <div class="namebox">
-              <h3>Dr. Américo Reyes</h3>
-              <spam>1986-1994</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->      
-          <!-- item--><a href="07mendoza.html">
-            <div class="gallery-item">
-              <img src="images/f07mm.jpg" alt="Mario Valentin Mendoza">
-              <div class="namebox" style="height: 70px;">
-              <h3>Dr. Mario Mendoza</h3>
-              <spam>1994-1996; 2002-2005; 2010-2012</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-   
-      
-      
-
-            <!-- item--><a href="#">
-              <div class="gallery-item">
-                <img src="images/f08jb.jpg" alt="Julio Bourdeth">
-                <div class="namebox">
-                <h3>Dr. Julio Bourdeth</h3>
-                <spam>1997-1998</spam>
-                </div>
+        </div>  
+          <div class="bio-container">
+            <img src="images/f14ma.jpg" alt="MarioAguilar" class="profile-image">
+            
+            <h1>Mario Francisco Aguilar</h1>
+            <h3>(Director Ejecutivo del HPMM desde 2022 a la actualidad)</h3>
+            
+            <div class="bio-section">
+                <h2>Educación</h2>
+                <p>
+                  Se graduó de la Universidad Nacional Autónoma de Honduras de Médico y Cirujano en septiembre de 1990 y en diciembre del 2001 de Especialista en Psiquiatría.  
+</p><p>Obtuvo Certificado Europeo en Trastornos de ansiedad y del humor dirigido a la formación en investigación Universidad de Maastricht Holanda (2000-2001) y Maestría en Bioética Dirigido a la Docencia e investigación, Universidad del Istmo Guatemala (2010-2011).
+                </p>
             </div>
-          </a>
-            <!-- fin item -->
-
-      <!-- item--><a href="09murcia.html">
-        <div class="gallery-item">
-          <img src="images/f09hm.jpg" alt="Hector Murcia Pinto">
-          <div class="namebox">
-          <h3>Dr. Hector Murcia</h3>
-          <spam>1998-2002</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      
-      
-        <!-- item--><a href="10chirinos.html">
-          <div class="gallery-item">
-            <img src="images/f10ac.jpg" alt="América Chirinos">
-            <div class="namebox">
-            <h3>Dra. América Chirinos</h3>
-            <spam>2005-2006; 2015-2022</spam>
+            
+            <div class="bio-section">
+                <h2>Academia y Publiaciones</h2>
+                <p>
+                  Apasionado por la investigación y la academia, trabajó ad honorem para la UNAH y participó en múltiples investigaciones:
+</p><p>
+                  Catedrático ad honorem de Post grado de Psiquiatría (2001-2015) impartiendo Clases de Psicopatología, Psiquiatría Clínica, Ética en Psiquiatría, fungiendo además como asistente de la Coordinación del Post grado de Psiquiatría (2004-2015), coordinador del Programa de investigación del Post grado de Psiquiatría (2005-2015), asesor de los trabajos de investigación de los diferentes Post grados de Medicina, nombrado por la dirección General de Post grados (2005-2015); coordinador del Comité de Bioética de la Dirección de Post-Grados en Medicina de la Universidad Nacional Autónoma de Honduras (2012- 2014) 
+                </p><p>•	Investigación sobre mortalidad de mujeres en edad reproductiva, con énfasis en mortalidad materna, Honduras, 1990. (Como Investigador) Autores Castellanos, Marel de Jesús; Ochoa Vásquez, José David Vincent. Tegucigalpa, Honduras. UNAH [1991] 125p il., mapas, cuadros. 21 cm. Premiado por la OMS con el primer lugar como mejor trabajo de investigación a nivel mundial 
+                </p><p>•	Evaluación de la salud mental de los médicos residentes en los diferentes post – grados en Medicina en la UNAH, 2000 . Premiado con el segundo lugar en el Congreso de Post – Grados de la UNAH 
+                </p><p>•	Desarrollo de un instrumento para medir la calidad de vida en pacientes con insuficiencia renal crónica y diálisis. Una experiencia en Honduras, Trabajo científico original. Revista Médica Hondureña 2002; Vol. 70:3-8 Premiado con el reconocimiento especial de Ciencias Médicas “Dr. PhD. Luis Humberto Cisne Reyes”, otorgado por el Colegio Médico al mejor trabajo de investigación nacional en su año. 
+                </p><p>•	Intervención grupal en madres adolescentes y adultas jóvenes con hijos ingresados en la sala de lactantes del Hospital Materno Infantil: Un modelo de psicoterapia de grupo de tiempo limitado, Trabajo Científico Original: 5-9 Honduras, 2007. LINDA SUYAPA GÓMEZ, AMÉRICO REYES TICAS, ALICIA PAZ, MARIO AGUILAR, VÍCTOR MARIO GIRÓN, CARLOS GALLARDO, KARLA POSANTES. Revista Hondureña de Postgrado de Psiquiatría Junio 2007. 5-9 
+</p><p>•	Relación entre trastornos depresivos y dolor en pacientes que consultan en atención primaria. Honduras, 2007. BEZNER PAZ, AMERICO REYES, MARIO AGUILAR. Revista Hondureña de Postgrado de Psiquiatría Junio 2007. Vol. 1- No.1: 10-12 
+</p><p>•	Evaluación de la respuesta al Haloperidol solo, haloperidol Combinado con, Diazepan y Olanzapina; en el Tratamiento de Pacientes con síndrome de, agitación durante su etapa aguda en el Hospital Psiquiátrico Dr. Mario Mendoza. Mario Aguilar, América Chirinos, Archaga F. Revista Hondureña de Postgrado de Psiquiatría Junio 2008. Vol. 1- No.1: 13-17 
+</p><p>•	Características del Índice de Funcionalidad Familiar en Adolescentes alumnos de Secundaria con antecedente de separación familiar parental por Emigración. Mario Aguilar, Sierra M, Aarón Rodríguez, F. Archaga, R. López, José Luis Cruz. Revista Hondureña del Postgrado de Psiquiatría. Año 2009 Vol. 3 - No. 1: 17-22 
+</p><p>•	Prevalencia de homicidios y suicidios un año antes y un año después del huracán Mitch en Honduras. Dr. Mario Aguilar, Dr. Américo Reyes Ticas. Revista Hondureña del Postgrado de Psiquiatría Agosto 2011 Vol. 5 - No. 1: 25-29 
+</p><p>•	Terapia Electroconvulsiva: Una Revisión. Dr. Mario Aguilar, Dra. Leticia Rueda. Revista Hondureña del Postgrado de Psiquiatría. Enero-Junio 2013 Vol. 7 - No. 1: 5-20 
+</p><p>Es Miembro del Colegio Hondureño de Neuropsicofarmacología; Miembro del Colegio Latinoamericano de Neuropsicofarmacología, CLANP; Miembro de la Asociación Psiquiátrica de América Latina; Miembro de la Asociación Hondureña de Psiquiatría.
+</p><p>Fue Secretario de actas de la Sociedad Hondureña de Psiquiatría Biológica, Secretario de la Asociación Centroamericana de Psiquiatría ACAP y actualmente es Presidente de la Sociedad Hondureña de Psiquiatría Biológica y Presidente de la Asociación de Bioética de Honduras 
+  </p>
             </div>
+            
+            <div class="bio-section">
+                <h2>Cargos</h2>
+                <p>
+                  Médico psiquiátrica propietario de clínica psiquiátrica, brindando atención clínica psiquiátrica ambulatoria e internamiento en diferentes hospitales de la ciudad desde 2001 hasta la actualidad. 
+                </p><p>
+Se desempeñó como Perito Evaluador en psiquiatría del INPREMA desde 2001 hasta el año 2015. 
+</p><p>
+Fue nombrado como Médico Psiquiatra del Hospital Mario Mendoza en 2001, donde ha rotado por diferentes áreas: programa de Psiquiatría Comunitaria (2001-2003); programa del servicio de adolescente en crisis (SAIAC) 2003-2004; salas de emergencia y consulta externa. 
+</p><p>
+Jefe del Servicio de Hospital de Día (2009-2015); Sub-director asistencial del Hospital Mario Mendoza (2015-2021); Director Ejecutivo del Hospital Mario Mendoza 2022- hasta la actualidad
+                </p>
+            </div>
+
+
+            <div class="bio-section">
+              <h2>Reconocimientos</h2>
+              <p>•  Certificado de Reconocimiento del Colegio Médico de Honduras por haberse distinguido como “El Mejor Residente” de la Especialidad de Psiquiatría durante el año de 1999. Tegucigalpa, Honduras. Octubre 2000.
+              </p><p>•	Diploma de Reconocimiento por participación en el “Segundo Concurso de Pintura para Pacientes Psiquiátricos Risperdal”. Tegucigalpa, Honduras. Febrero 2001 
+              </p><p>•	Diploma de Agradecimiento de la Radio Católica por su destacada participación en el Programa No Desistas. Agosto 2001. 
+              </p><p>•	Certificado de Reconocimiento Especial del Colegio Médico de Honduras por haberse hecho acreedor al Premio en Ciencias Médicas Clínicas “Dr. PhD. Luis Humberto Cisne Reyes”. Tegucigalpa, Honduras. Octubre 2001 
+              </p><p>•	Reconocimiento de la “XXVIII Promoción de las Especialidades Médicas” por “El valioso e incalculable aporte en la formación de especialistas en Psiquiatría”. Tegucigalpa, Honduras. Diciembre 2005 
+              </p><p>•	Certificado de la Universidad Nacional Autónoma de Honduras como “Profesor Distinguido del Post – Grado de Psiquiatría”. Tegucigalpa, Honduras. Diciembre 2005 
+              </p><p>•	Certificado de Reconocimiento del Post – Grado de Psiquiatría por su inestimable contribución a la Psiquiatría en Honduras. Tegucigalpa, Honduras. Septiembre 2006 
+ </p>
+          </div>
+
+          <div class="bio-section">
+            <h2>Actividades de apoyo social comunitaria</h2>
+            <p>•	Conferencista invitado a diferentes escuelas y colegios de la ciudad capital 
+            </p><p>•	Conferencista invitado a diferentes Universidades de Honduras (UNAH, UNICAH, UNITEC) 
+            </p><p>•	Conferencista invitado y de apoyo de la Federación Internacional para el Desarrollo de la Familia IFFD (International Federation for Family and Development) 
+            </p><p>•	Coordinador de Padres encargados junto a Esposa del Equipo de Colaboración Familiar del Centro Escolar Aldebarán 
+            </p><p>•	Coordinador del equipo de Senderismo Aldebarán y participante de senderismo en familia 
+              
+</p>
         </div>
-      </a>
-        <!-- fin item -->
-              <!-- item--><a href="11guifarro.html">
-                <div class="gallery-item">
-                  <img src="images/f11vg.jpg" alt="Vilma Sagrario Guifarro">
-                  <div class="namebox">
-                  <h3>Dra. Vilma Guifarro</h3>
-                  <spam>2006</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-          
-          
-              <!-- item--><a href="12paz.html">
-                <div class="gallery-item">
-                  <img src="images/f12ap.jpg" alt="Alicia Del Carmen Paz">
-                  <div class="namebox">
-                  <h3>Dra. Alicia Paz</h3>
-                  <spam>2006-2010</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-                            <!-- item--><a href="13rodriguez.html">
-                              <div class="gallery-item">
-                                <img src="images/f13ar.jpg" alt="Aarón Baruch Rodríguez">
-                                <div class="namebox">
-                                <h3>Dr Aarón Rodríguez</h3>
-                                <spam>2013-2014</spam>
-                                </div>
-                            </div>
-                          </a>
-                            <!-- fin item -->    
-                                          <!-- item--><a href="14aguilar.html">
-                <div class="gallery-item">
-                  <img src="images/f14ma.jpg" alt="Mario Francisco Aguilar">
-                  <div class="namebox">
-                  <h3>Dr. Mario Aguilar</h3>
-                  <spam>2022-Actualidad</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->              
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-             
-
-   
-
-      </div>
+            <br>
+            <br>
+        </div>
+        <a href="index.html" class="sticky-button" id="top">⬆ Regresar</a>
     
 </body>

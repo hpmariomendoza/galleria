@@ -143,16 +143,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 90%;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-sizing: content-box;
-  width: 100%;
-  border: solid #464646 10px;
 }
 
 .gallery-item h3 {
@@ -185,14 +181,71 @@
     font-size: 3rem;
     text-align: center;
 }
-.principal{
-  width: 30%;
+
+/* biografia style*/
+.bio-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 1000px;
+  display: grid;
+
   margin: auto;
-}
-.textblack{
-  color: black;
+  padding-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .bio-section {
+            margin-top: 20px;
+        }
+
+/*estilo del boton sticky regresar */
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.sticky-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+        @media (max-width: 600px) {
+            .bio-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .gallery {
@@ -222,24 +275,8 @@
     text-align: center;
 }
 }
-/*
-/* Small devices (sm: tablets, 576px and up) * /
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* Estilos para tablets * /
-}
 
-/* Medium devices (md: desktops, 768px and up) * /
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Estilos para pantallas medianas * /
-}
-*/
-
-
-/*@media (max-width: 480px) {*/
- /* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-  /* Estilos para dispositivos pequeños */
-
+@media (max-width: 480px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     padding: 0px;
@@ -329,184 +366,59 @@
                 </a>
               </li>
           </ul>
-          
-    </div> <h2 class="titulopage">Galleria de directores</h2> 
-    <div class="principal">
-          <!-- item--><a href="#" class="textblack">
-            <div class="gallery-item">
-              <img src="images/f00mm.jpg" alt="director">
-              <div class="namebox">
-              <h3 style="margin-top: 20px;">Dr. Mario Mendoza</h3>
-              </div>
+        </div>  
+          <div class="bio-container">
+            <img src="images/f02op.jpg" alt="MarioAguilar" class="profile-image">
+            
+            <h1>Octavio Pineda</h1>
+            <h3 style="  place-items: center; display: grid;">(Director del Hospital Psiquiátrico Dr. Mario Mendoza 1974-1975)</h3>
+ <!--           <div class="bio-section">
+              <p>
+                Nació el 15 de septiembre de 1937 en Soledad, Departamento de El Paraíso. Contrajo nupcias con la Dra. Virginia Aurora Figueroa Girón (primera Doctora hondureña especializada en Dermatología), procreando tres hijos: Maritza, Dagoberto y Virginia. 
+              </p>
           </div>
-        </a>
-      </div>
-    <div class="gallery">
-      
-      <!-- item--><a href="01leon.html">
-      <div class="gallery-item">
-          <img src="images/f01fl.jpg" alt="Francisco León Gómez">
-          <div class="namebox">
-          <h3>Dr. Francisco León</h3>
-          <spam>1973-1974</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="02pineda.html">
-        <div class="gallery-item">
-          <img src="images/f02op.jpg" alt="Octavio Pineda">
-          <div class="namebox">
-          <h3>Dr. Octavio Pineda</h3>
-          <spam>1974-1975</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="03murra.html">
-        <div class="gallery-item">
-          <img src="images/f03dm.jpg" alt="Dagoberto Espinoza Murra">
-          <div class="namebox">
-          <h3>Dr. Dagoberto Murra</h3>
-          <spam>1975-1976</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      <!-- item--><a href="04vittetoe.html">
-        <div class="gallery-item">
-          <img src="images/f04kv.jpg" alt="Keneth Vittetoe">
-          <div class="namebox">
-          <h3>Dr. Keneth Vittetoe</h3>
-          <spam>1976-1984</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-
-          <!-- item--><a href="05ucles.html">
-            <div class="gallery-item">
-              <img src="images/f05ju.jpg" alt="Javier Uclés">
-              <div class="namebox">
-              <h3>Dr. Javier Uclés</h3>
-              <spam>1984-1986</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-          <!-- item--><a href="06reyes.html">
-            <div class="gallery-item">
-              <img src="images/f06ar.jpg" alt="Américo Reyes Ticas">
-              <div class="namebox">
-              <h3>Dr. Américo Reyes</h3>
-              <spam>1986-1994</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->      
-          <!-- item--><a href="07mendoza.html">
-            <div class="gallery-item">
-              <img src="images/f07mm.jpg" alt="Mario Valentin Mendoza">
-              <div class="namebox" style="height: 70px;">
-              <h3>Dr. Mario Mendoza</h3>
-              <spam>1994-1996; 2002-2005; 2010-2012</spam>
-              </div>
-          </div>
-        </a>
-          <!-- fin item -->
-   
-      
-      
-
-            <!-- item--><a href="#">
-              <div class="gallery-item">
-                <img src="images/f08jb.jpg" alt="Julio Bourdeth">
-                <div class="namebox">
-                <h3>Dr. Julio Bourdeth</h3>
-                <spam>1997-1998</spam>
-                </div>
+            
+            <div class="bio-section">
+                <h2>Educación</h2>
+                <p>
+                  Recibió su educación primaria en diferentes municipios del departamento de El Paraíso y se graduó de Maestro de Educación Primaria de la Normal de Varones de Tegucigalpa en 1955. En 1957 obtuvo el Bachiller en Ciencias y Letras por equivalencia en el Instituto Salesiano San Miguel. 
+                </p><p>Estudió medicina en la UNAH, donde se graduó como Médico y Cirujano General (1966), posteriormente viajó a la Universidad de Heidelberg, Alemania (1966-1969) donde se especializó en Psiquiatría. Realizó un Curso especial de Psiquiatría Clínica en la Universidad Complutense de Madrid, España (1969-1970) y un Curso especial en Psiquiatría en la Washington University, San Luis M° USA (1971), también estuvo 3 meses en el Instituto Nacional de Neurología, México D.F. (1972) en un Curso especial sobre Epilepsias.
+                                  </p>
             </div>
-          </a>
-            <!-- fin item -->
-
-      <!-- item--><a href="09murcia.html">
-        <div class="gallery-item">
-          <img src="images/f09hm.jpg" alt="Hector Murcia Pinto">
-          <div class="namebox">
-          <h3>Dr. Hector Murcia</h3>
-          <spam>1998-2002</spam>
-          </div>
-      </div>
-    </a>
-      <!-- fin item -->
-      
-      
-        <!-- item--><a href="10chirinos.html">
-          <div class="gallery-item">
-            <img src="images/f10ac.jpg" alt="América Chirinos">
-            <div class="namebox">
-            <h3>Dra. América Chirinos</h3>
-            <spam>2005-2006; 2015-2022</spam>
+            
+            <div class="bio-section">
+                <h2>Academia y Publiaciones</h2>
+                <p>
+                  Durante 43 años fungió como Profesor de Psiquiatría y Psicopatología de la Facultad de Ciencias Médicas, UNAH (abril de 1970 hasta 2013), fue Decano de la Facultad de Ciencias Médicas en dos ocasiones (1976-1979; 2009-2010) y se desempeñó como Vicerrector de la UNAH (1978-1981). También fue Director del Boletín de Psiquiatría (20 números), fue miembro del Consejo Editorial y Director del Boletín de la Facultad de Ciencias Médicas, ADELANTE, (13 NÚMEROS).
+                </p><p>Participó en congresos nacionales y regionales sobre Psiquiatría y en talleres y seminarios nacionales e internacionales sobre Educación Médica; brindó charlas y conferencias en los 18 Departamentos del país abordando el tema de la prevención del alcoholismo y el consumo de otras sustancias psicoactivas; desarrolló temas sobre Psiquiatría y Filosofía con Residentes de último año del Postgrado de Psiquiatría.
+                </p><p>Fue un autor prolífico tanto en el ambiente científico como literario, entre sus obras se destacan dos libros de texto (Introducción  a la  Psicopatología y El ABC de las Epilepsias); 10 Artículos científicos publicados en la Revista del Colegio Médico de Honduras; 4 Artículos científicos publicados en la Revista de la Facultad de  Ciencias Médicas; 40 artículos sobre temas de salud y educación médica en periódicos del país y dos obras literarias: La magia del Arcoíris (Novela) y La Virgen embarazada y otros relatos (cuentos).
+            </p>
             </div>
+            
+            <div class="bio-section">
+                <h2>Cargos</h2>
+                <p>
+                  Fungió como Director del Hospital Psiquiátrico Dr. Mario Mendoza de 1975 a 1976 y posteriormente fue el primer Director General del Instituto Hondureño Para la Prevención y Tratamiento del Alcoholismo, Drogadicción y Farmacodependencia (IHADFA)
+                </p>
+            </div>
+
+            <div class="bio-section">
+                <h2>Reconocimientos</h2>
+                <p>
+                  De la   Asociación de Estudiantes de Medicina, de la Facultad, de la UNAH. Profesor Emérito de la UNAH y distinciones del Colegio Médico de Honduras.                  
+                </p>
+            </div>
+
+            <div class="bio-section">
+              <p>
+                Falleció el 21 de mayo de 2021 a los 83 años de edad. Fallece el Dr. Dagoberto Espinoza Murra, exdecano y Vicerrector de la UNAH                  
+              </p>
+          </div>
+
+-->
+            <br>
+            <br>
         </div>
-      </a>
-        <!-- fin item -->
-              <!-- item--><a href="11guifarro.html">
-                <div class="gallery-item">
-                  <img src="images/f11vg.jpg" alt="Vilma Sagrario Guifarro">
-                  <div class="namebox">
-                  <h3>Dra. Vilma Guifarro</h3>
-                  <spam>2006</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-          
-          
-              <!-- item--><a href="12paz.html">
-                <div class="gallery-item">
-                  <img src="images/f12ap.jpg" alt="Alicia Del Carmen Paz">
-                  <div class="namebox">
-                  <h3>Dra. Alicia Paz</h3>
-                  <spam>2006-2010</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->    
-                            <!-- item--><a href="13rodriguez.html">
-                              <div class="gallery-item">
-                                <img src="images/f13ar.jpg" alt="Aarón Baruch Rodríguez">
-                                <div class="namebox">
-                                <h3>Dr Aarón Rodríguez</h3>
-                                <spam>2013-2014</spam>
-                                </div>
-                            </div>
-                          </a>
-                            <!-- fin item -->    
-                                          <!-- item--><a href="14aguilar.html">
-                <div class="gallery-item">
-                  <img src="images/f14ma.jpg" alt="Mario Francisco Aguilar">
-                  <div class="namebox">
-                  <h3>Dr. Mario Aguilar</h3>
-                  <spam>2022-Actualidad</spam>
-                  </div>
-              </div>
-            </a>
-              <!-- fin item -->              
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-             
-
-   
-
-      </div>
+        <a href="index.html" class="sticky-button" id="top">⬆ Regresar</a>
     
 </body>
